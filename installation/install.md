@@ -238,7 +238,7 @@ command that produces each output.
 6. Show the `nscd` service is running
 7. Show the `ntpd` service is running<br>
 
-**NOTE**: For this lab, stick to the checks above. When performing pre-reqs check for customers, though, use the [comprehensive list compiled by the FCE folks](https://cloudera.box.com/s/b5vk5ltu9t2inotc0pv32hekgns8e9k2).
+**NOTE**: For this lab, stick to the checks above. When performing pre-reqs check for customers, though, use the [comprehensive list compiled by the FCE folks](https://github.com/cloudera-ps/prereq-checks).
 
 ---
 <div style="page-break-after: always;"></div>
