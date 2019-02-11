@@ -278,12 +278,12 @@ or [here for MySQL](http://www.cloudera.com/documentation/enterprise/latest/topi
 5. On the master MySQL node, grant replication privileges for your replica node:<br>
     a. Log in with `mysql -u ... -p` <br>
     b. Note the FQDN of your replica host.<br>
-    c. `mysql> **GRANT REPLICATION SLAVE ON \*.\* TO '*user*'@'*FQDN*' IDENTIFIED BY '*password*';**`<br>
-    d. `mysql> **SET GLOBAL binlog_format = 'ROW';** `<br>
-    e. `mysql> **FLUSH TABLES WITH READ LOCK;`**
+    c. `mysql> GRANT REPLICATION SLAVE ON \*.\* TO '*user*'@'*FQDN*' IDENTIFIED BY '*password*';`<br>
+    d. `mysql> SET GLOBAL binlog_format = 'ROW'; `<br>
+    e. `mysql> FLUSH TABLES WITH READ LOCK;`
 
 6. In a second terminal session, log into the MySQL master and show its  status:<br>
-    a. `mysql> **SHOW MASTER STATUS;**`<br>
+    a. `mysql> SHOW MASTER STATUS;`<br>
     b. Make note of the file name and byte offset. The replica needs this info to sync to the master.<br>
     c. Logout of the second session; remove the lock on the first with `mysql> **UNLOCK TABLES;**`
 
@@ -291,8 +291,8 @@ or [here for MySQL](http://www.cloudera.com/documentation/enterprise/latest/topi
     `mysql> **CHANGE MASTER TO**<br> **MASTER_HOST='*master host*',**<br> **MASTER_USER='*replica user*',**<br> **MASTER_PASSWORD='*replica password*',**<br> **MASTER_LOG_FILE='*master file name*',**<br> **MASTER_LOG_POS=*master file offset*;**`
 
 8. Initiate slave operations on the replica<br>
-    a. `mysql> **START SLAVE;**`<br>
-    b. `mysql> **SHOW SLAVE STATUS \G**`<br>
+    a. `mysql> START SLAVE;`<br>
+    b. `mysql> SHOW SLAVE STATUS \G`<br>
     c. If successful, the `Slave_IO_State` field will read `Waiting for master to send event`<br>
     d. Once successful, capture this output and store it in `labs/2_replica_working.md`<br>
     e. Review your log (`/var/log/mysqld.log`) for errors. If stuck, consult with a colleague or instructor.<p>
