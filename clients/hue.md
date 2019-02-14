@@ -129,15 +129,12 @@
 ---
 <div style="page-break-after: always;"></div>
 
-## <center> HUE Lab: Security or Availability?
+## <center> HUE Lab:  Availability?
 
-* [Integrate Hue and Sentry](http://gethue.com/apache-sentry-made-easy-with-the-new-hue-security-app/)
-    * Watch out for red herring instructions or missing steps
 * Install a [second Hue instance and load balancer](http://gethue.com/automatic-high-availability-and-load-balancing-of-hue-in-cloudera-manager-with-monitoring/)
 
-* Consult with an instructor to get a meaningful screenshot
-* Name the screenshot <code>1_hue_sentry.png</code> or <code>1_hue_lb.png</code>, as appropriate
-* If you do both, number the screenshots to show the order you did them.
+* Capture a  screenshot showing the hue instances after enabling HA.
+* Name the screenshot  <code>1_hue_lb.png</code>, as appropriate
 
 ---
 <div style="page-break-after: always;"></div>
