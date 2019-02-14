@@ -129,7 +129,7 @@
 ---
 <div style="page-break-after: always;"></div>
 
-## <center> HUE Lab:  Availability?
+## <center> HUE Lab:  Availability
 
 * Install a [second Hue instance and load balancer](http://gethue.com/automatic-high-availability-and-load-balancing-of-hue-in-cloudera-manager-with-monitoring/)
 
