@@ -6,7 +6,7 @@
 ---
 <div style="page-break-after: always;"></div>
 
-# <center> Challenges - September 24, 2018 - FCE New Hire
+# <center> Challenges - February 15, 2019 - SEBC Amsterdam
 
 * Overview
   * Build a CM-managed CDH cluster and secure it
@@ -30,7 +30,7 @@
 ## <center> Challenge Setup
 
 * Create the Issue `Challenges Setup`
-* Make sure `araujo`, `alexciobanu` and `kiran` are Collaborators
+* Make sure you add my git id `rafaelarana` as Collaborators
 * Make sure your GitHub labels have been configured
 * Assign the Issue to yourself and label it `started`
 * Add the following Linux accounts to all nodes
@@ -45,9 +45,9 @@
   * List the file system capacity for the first node 
   * List the command and output for `yum repolist enabled` 
   * List the `/etc/passwd` entries for `rocky` and `denali`
-    * Do not list the entire file
+    * Do not list the entire file - only in one node
   * List the `/etc/group` entries for `alaska` and `colorado`
-    * Do not list the entire file
+    * Do not list the entire file  - only in one node
   * List the output of the following commands:
     * `getent group alaska`
     * `getent passwd rocky`
@@ -105,7 +105,7 @@
 ---
 <div style="page-break-after: always;"></div>
 
-## <center> Challenge 3 - Install the lastest CDH 5.8 version
+## <center> Challenge 3 - Install the  CDH 5.14.4 version
 
 * Create the Issue `Install CDH`
 * Assign yourself and label it `started`
@@ -117,7 +117,7 @@
     * The command and output for `hdfs dfs -ls /user`
     * The command and output from the CM API call `../api/v14/hosts` 
     * The command and output from the CM API call `../api/v8/clusters/<githubName>/services`
-* Login to Hue and install the Hive sample data 
+* Login to Hue and **install the Hive sample data**
     * Use `beeline` to display the `default` database tables
     * Copy the output to `challenges/labs/3_beeline.png`
 
@@ -133,7 +133,6 @@
 * Assign yourself and label it `started`
 * As user `rocky`, use `teragen` to generate a 12,345,000-record dataset
   * Write the output to 8 files
-  * Set the block size to 64 MB
   * Set the mapper container size to 768 MiB
   * Name the target directory `tgen`
   * Use the `time` command to capture job duration
@@ -155,7 +154,7 @@
 * Install an MIT KDC on the last node in your cluster
   * Name your realm after your GitHub handle
   * Use `ABC` as a suffix
-  * For example: `MFERNEST.ABC`
+  * For example: `RAFAELARANA.ABC`
 * Create Kerberos user principals for `rocky`, `denali`, and `cloudera-scm`
   * Assign `cloudera-scm` the privileges needed to create service principals and keytab files
 * Kerberize the cluster
@@ -183,8 +182,8 @@
   * Assign the `colorado` group to this role
 * Create a role for `ServiceViewer` that can read the `customers` databases
   * Assign the `alaska` group to this role
-* Use `beeline` to select ten records from `web_logs`
-* Use `beeswax` to select ten records from `customers`
+* Use `beeline` to select 15 records from `web_logs`
+* Use `beeswax` to select 15 records from `customers`
 * Capture each outcome as a screenshot, `6_beeline.png` and `6_beeswax.png`
 * Label the issue `review`
 * Assign the issue to the instructor
@@ -196,10 +195,8 @@
 ## <center> When time runs out:
 
 * Commit any outstanding changes from your repo to GitHub
-* Notify `araujo@cloudera.com`, `alex.ciobanu@cloudera.com` and `kiran@cloudera.com` once you have stopped pushing to your repo
-* In-class candidates only:
-  * Please fill out [this survey form](https://goo.gl/forms/1PvoLdzGjOVh1leb2)
-  * Add your final comments to `labs/7_feedback_final.md` -- remember to commit them!
+* Notify via email to `rafael.arana@cloudera.com` once you have stopped pushing to your repo
+* Add your final comments to `labs/7_feedback_final.md` -- remember to commit them!
 
 ---
 <div style="page-break-after: always;"></div>
